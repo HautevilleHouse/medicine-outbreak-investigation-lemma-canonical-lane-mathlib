@@ -1,0 +1,20 @@
+import canonicalLaneMathlib.AdmissibleClass
+import HautevilleHouse.MedicineOutbreakInvestigationLemmaCanonicalLaneLean.CompartmentModels
+import HautevilleHouse.MedicineOutbreakInvestigationLemmaCanonicalLaneLean.PharmacokineticModels
+import HautevilleHouse.MedicineOutbreakInvestigationLemmaCanonicalLaneLean.DiagnosticInference
+import HautevilleHouse.MedicineOutbreakInvestigationLemmaCanonicalLaneLean.SurvivalAnalysis
+import HautevilleHouse.MedicineOutbreakInvestigationLemmaCanonicalLaneLean.OutbreakDetection
+import HautevilleHouse.MedicineOutbreakInvestigationLemmaCanonicalLaneLean.InterventionEffectiveness
+
+namespace HautevilleHouse
+namespace MedicineOutbreakInvestigationLemmaCanonicalLaneLean
+
+def MedicineOutbreakInvestigationLemmaClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem medicine_outbreak_investigation_lemma_endgame (A : AdmissibleClass) :
+    MedicineOutbreakInvestigationLemmaClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end MedicineOutbreakInvestigationLemmaCanonicalLaneLean
+end HautevilleHouse
